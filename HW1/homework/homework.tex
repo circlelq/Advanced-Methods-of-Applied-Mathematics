@@ -1,0 +1,158 @@
+\documentclass[12pt]{article}
+\input{/Users/circle/Documents/博一上/homework/setting.tex}
+\setcounter{secnumdepth}{2}
+\usepackage{bm}
+\usepackage{autobreak}
+\usepackage{amsmath}
+
+%pdf文件设置
+\hypersetup{
+	pdfauthor={袁磊祺},
+	pdftitle={高等应用数学1}
+}
+
+\title{
+		\vspace{-1in} 	
+		\usefont{OT1}{bch}{b}{n}
+		\normalfont \normalsize \textsc{\LARGE Peking University}\\[1cm] % Name of your university/college \\ [25pt]
+		\horrule{0.5pt} \\[0.5cm]
+		\huge \bfseries{高等应用数学1} \\
+		\horrule{2pt} \\[0.5cm]
+}
+\author{
+		\normalfont 								\normalsize
+		第二组\quad 袁磊祺\\	\normalsize
+        \today
+}
+\date{}
+
+\begin{document}
+
+% \input{setc.tex}
+
+\maketitle
+
+\section{}
+
+P408.13
+
+(a) (38a)的物理意义是原来初始时刻位于X，并且具有相应速度U的微团，在时刻t的空间坐标。(38b)的物理意义是在时刻t位于x的具有速度u的微团在原来初始时刻所具有的速度U。
+\\(b) A的物理意义是原来初始时刻位于(X,U)的微团在时刻t的速度u随时间的变化率，也就是加速度。则A的空间形式可以定义为:
+\begin{equation}
+	a(x,u,t)=A[X(x,u,t), U(x,u,t)]
+\end{equation}
+(c) 物质变量表示的导数
+\begin{equation}
+	\frac{\partial\overline\Psi(X,U,t)}{\partial t} = \frac{\partial\Psi}{\partial x}\cdot\frac{\partial x}{\partial t} + \frac{\partial\Psi}{\partial u}\cdot\frac{\partial u}{\partial t} + \frac{\partial\Psi}{\partial t}
+\end{equation}
+根据A和u的定义，有
+$$u(X,U,t) = \frac{\partial x(X,U,t)}{\partial t}$$
+$$A(X,U,t) = \frac{\partial u(X,U,t)}{\partial t}$$
+故，有
+$$\frac{\partial\overline\Psi(X,U,t)}{\partial t} =
+\frac{\partial\Psi}{\partial t} + u\cdot\frac{\partial\Psi}{\partial x} + A\cdot\frac{\partial\Psi}{\partial u}$$
+又因为有(41)式，所以(42)式得证。
+\\(d)由Jacobi行列式的定义与行列式的求导公式可得：
+$$\frac{\partial J(X,U,t)}{\partial t} =\frac{\partial}{\partial t}\cdot
+{\left|
+	\begin{array}{ccc}
+    	\frac{\partial x}{\partial X} & \frac{\partial x}{\partial U}\\
+    	\frac{\partial u}{\partial X} & \frac{\partial u}{\partial U}
+	\end{array} 	
+\right |} = 
+{\left|
+	\begin{array}{ccc}
+		\frac{\partial u}{\partial X} & \frac{\partial u}{\partial U}\\
+		\frac{\partial u}{\partial X} & \frac{\partial u}{\partial U}
+	\end{array} 	
+\right |} + 
+{\left|
+	\begin{array}{ccc}
+		\frac{\partial x}{\partial X} & \frac{\partial x}{\partial U}\\
+		\frac{\partial A}{\partial X} & \frac{\partial A}{\partial U}
+	\end{array} 	
+	\right |}
+$$
+上式右端第一个行列式为0，第二个行列式为
+$$
+{\left|
+	\begin{array}{ccc}
+		\frac{\partial x}{\partial X} & \frac{\partial x}{\partial U}\\
+		\frac{\partial A}{\partial X} & \frac{\partial A}{\partial U}
+	\end{array} 	
+	\right |} = 
+{\left|
+	\begin{array}{ccc}
+		\frac{\partial x}{\partial X} & \frac{\partial x}{\partial U}\\
+		\frac{\partial a}{\partial u}\cdot\frac{\partial u}{\partial X} & \frac{\partial a}{\partial u}\cdot\frac{\partial u}{\partial U}
+	\end{array} 	
+	\right |} = 
+\frac{\partial a}{\partial u}\cdot J
+$$
+其中，
+$$\phi(X,U,t) = 
+{\left|
+	\begin{array}{ccc}
+		\frac{\partial x}{\partial X} & \frac{\partial x}{\partial U}\\
+		\frac{\partial u}{\partial X} & \frac{\partial u}{\partial U}
+	\end{array} 	
+	\right |} = 
+J(X,U,t)
+$$
+则，$\frac{\partial \phi}{\partial t} = \phi\cdot\frac{\partial a}{\partial u}
+$得证。
+\\(e)为了将对时间的导数放到积分号里，将空间描述换为物质描述，使得积分区域与时间无关.
+$$
+\frac{\dif }{\dif t}\iint_{R(t)} \Psi(x,u,t)\dif x\dif u = \frac{\dif }{\dif t} \iint_{R(t)} \overline\Psi(X,U,t)J(X,U,t)\dif X\dif U
+$$
+对被积函数求导
+
+
+{P416.4}
+\\(a)有质量守恒方程：
+$$
+\frac{\partial \rho}{\partial t} + \frac{\partial(\rho v_i)}{\partial x_i}=0
+$$
+物质导数的分量形式为：
+$$
+\rho\frac{\Dif  v_j}{\Dif t}=\rho\frac{\partial v_j}{\partial t} + \rho v_i\frac{\partial v_j}{\partial x_i}
+$$
+将质量守恒方程代入以上方程，可得
+$$
+\rho\frac{\Dif  v_j}{\Dif t}=\rho\frac{\partial v_j}{\partial t} + \rho v_i\frac{\partial v_j}{\partial x_i} + v_j (\frac{\partial \rho}{\partial t} + \frac{\partial(\rho v_i)}{\partial x_i})
+$$
+整理上式，即可得出方程
+$$
+\rho\frac{\Dif  v_j}{\Dif t}=\frac{\partial(\rho v_j)}{\partial t}+\frac{\partial (v_j\rho v_i)}{\partial x_i}
+$$
+首先将(19)式写为积分形式，可得
+$$
+\iiint_{R(t)}\Big[\rho\frac{\Dif  v_j}{\Dif t} - \rho f_j - \frac{\partial(T_{ij})}{\partial x_i}\Big] \dif \tau = 0
+$$
+将上式中的物质导数用之前推导出的方程代替，并用方向符号写成
+$$
+\iiint_{R(t)} \frac{\partial (\rho v)}{\partial t} \dif \tau = 
+\iiint_{R(t)} \Big[\rho f + \nabla\cdot T - \nabla\cdot(\rho vv)\Big]\dif \tau
+$$
+因为区域R固定，上式左端对于时间的倒数可以提取到积分号外，并利用奥高公式，将$\cdot \nabla$换为$\cdot n$,则原式得证。
+\\(b)动量流量张量是由固定区域边界上的流入或流出得物质所携带的动量产生的。对该固定区域的作用与作用在该固定边界上的应力相似，动量流量本身也具有不同方向的分量，而动量流量张量得分量即表示动量流量本身得分量在指定坐标系下不同方向的分量。
+\newpage
+{P434.5}
+\\(a)质量守恒方程、线动量平衡定律和能量平衡定律分别是以下形式：
+$$\frac{D\rho}{Dt} = -\rho\nabla\cdot v$$
+$$\rho\frac{Dv}{Dt} = \rho f + \nabla\cdot T$$
+$$\rho\frac{D}{Dt}(\frac{1}{2}v\cdot v+e) = \rho(f\cdot v)-\nabla\cdot(q-T\cdot v)$$
+在物质区域之中物理量的改变率来自体力和面力的贡献。对于质量守恒方程而言，能使得质量增加或者减少的体力是不存在的，质量的改变只能由面通量改变，所以就自然没有Q项。
+\\(b)微分形式的方程推导过程中，对积分方程的边界场使用了高斯公式，然后用D-R引理将积分方程变为了微分方程
+$$\oiint_{\partial R}n\cdot J \dif \sigma = \iiint_{R}\nabla\cdot J\dif \tau$$
+故由上述方程的左边可以看出J的物理意义是$\partial R$界面上的通量。在质量守恒方程中，J=v,v可解释为质量通量矢量，能量平衡方程中，$J = q-T\cdot v$则可以解释为能量通量矢量。
+\\(c)在(40b)式中，
+$$\frac{d}{dt}\iiint_{R(t)}\rho F\dif \tau = 
+\iiint_{R(t)}\rho Q\dif \tau + \iint_{\partial R(t)}j(n) \dif \sigma$$
+$F$表示单位质量物理具有的物理量$F$(例如动量能量)，等式左侧表示$t$时刻占据区域$R(t)$具有的物理量随时间的变化率。等式右侧第一项表示区域$R(t)$内的物理量F的生成速率，$Q$是单位质量物理量$F$的生成速率。等式右侧第二项表示边界上的物理量F的流入速率，$n$是内法线方向，流入的量等于流出的量，才有$j(-n)=-j(n)$. $j(n)\equiv j(x,t,n)$是在$\partial R$上t时刻，位于$x$处沿$n$方向物理量$F$的通量。
+
+\nocite{*}
+
+\input{bib.tex}
+
+\end{document}
