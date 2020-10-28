@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\input{/Users/circle/Documents/博一上/homework/setting.tex}
+\setcounter{secnumdepth}{2}
+\usepackage{bm}
+\usepackage{autobreak}
+\usepackage{amsmath}
+\setlength{\parindent}{2em}
+
+
+%pdf文件设置
+\hypersetup{
+	pdfauthor={袁磊祺},
+	pdftitle={高等应用数学作业2}
+}
+
+\title{
+		\vspace{-1in} 	
+		\usefont{OT1}{bch}{b}{n}
+		\normalfont \normalsize \textsc{\LARGE Peking University}\\[1cm] % Name of your university/college \\ [25pt]
+		\horrule{0.5pt} \\[0.5cm]
+		\huge \bfseries{高等应用数学作业2} \\
+		\horrule{2pt} \\[0.5cm]
+}
+\author{
+		\normalfont 								\normalsize
+		第二组\quad 袁磊祺 \quad 刘志如 \quad 宋庭鉴 \quad 岐亦铭 \quad 董淏翔 \quad 周子铭 \quad 撒普尔\\	\normalsize
+        \today
+}
+\date{}
+
+\begin{document}
+
+\input{setc.tex}
+
+\maketitle
+
+\section{1}
+
+\begin{equation}
+	33^{1 / 5}=(32+1)^{1 / 5}=2\left(1+\frac{1}{32}\right)^{1 / 5}=2\left(1+\frac{1}{5} \times \frac{1}{32}-\frac{R}{2}\right)=\frac{161}{80}-R
+\end{equation}
+
+\begin{equation}
+	\mathrm{R}=\frac{1}{5} \times \frac{4}{5} \times \frac{1}{32^{2}}+O\left(\frac{1}{32^{3}}\right) \approx \frac{1}{25 \times 256} \approx \frac{1}{6 \times 1000}=\frac{10}{6} \times 10^{-4} \approx 1.7 \times 10^{-4}
+\end{equation}
+
+\nocite{*}
+
+\input{bib.tex}
+
+\end{document}

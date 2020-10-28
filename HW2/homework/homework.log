@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.6.10)  20 OCT 2020 10:09
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.6.10)  28 OCT 2020 20:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/circle/Documents/博一上/高等应用数学/Advanced-Methods-of-Applied-Mathematics/HW1/homework/homework
-(/Users/circle/Documents/博一上/高等应用数学/Advanced-Methods-of-Applied-Mathematics/HW1/homework/homework.tex
+**/Users/circle/Documents/博一上/高等应用数学/Advanced-Methods-of-Applied-Mathematics/HW2/homework/homework
+(/Users/circle/Documents/博一上/高等应用数学/Advanced-Methods-of-Applied-Mathematics/HW2/homework/homework.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-06> (/usr/local/texlive/2020/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
@@ -1262,45 +1262,54 @@ LaTeX Info: Redefining \nameref on input line 31.
 \openout7 = `homework.out'.
 
 \c@lstlisting=\count380
+ (./setc.tex)
 LaTeX Font Info:    Trying to load font information for OT1+bch on input line 36.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ot1bch.fd
 File: ot1bch.fd 2004/10/18 font definitions for OT1/bch.
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 43.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 39.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 43.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 39.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 43.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 39.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+esint on input line 43.
+LaTeX Font Info:    Trying to load font information for U+esint on input line 39.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/esint/uesint.fd
 File: uesint.fd 
-) [1
+) (./bib.tex [1
 
-] [2] [3] (./bib.tex [4]
+]
 No file homework.bbl.
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 219.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 219.
- (./homework.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 219.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 219.
+
+Package caption Warning: Unused \captionsetup[figure] on input line 2.
+See the caption package documentation for explanation.
+
+
+Package caption Warning: Unused \captionsetup[table] on input line 3.
+See the caption package documentation for explanation.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 51.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 51.
+(./homework.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 51.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 51.
 Package rerunfilecheck Info: File `homework.out' has not changed.
-(rerunfilecheck)             Checksum: 3C8D916A6019C8E4C3F9CD87B45BBD77;1008.
+(rerunfilecheck)             Checksum: 7513EBF3303FFCEE9768B7BB03651926;48.
  ) 
 Here is how much of TeX's memory you used:
- 35262 strings out of 479418
- 691907 string characters out of 5884585
- 1290529 words of memory out of 5000000
- 52043 multiletter control sequences out of 15000+600000
- 543400 words of font info for 117 fonts, out of 8000000 for 9000
+ 35218 strings out of 479418
+ 688637 string characters out of 5884585
+ 1282517 words of memory out of 5000000
+ 51997 multiletter control sequences out of 15000+600000
+ 543392 words of font info for 116 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 63i,19n,83p,1281b,342s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,5n,83p,1281b,335s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on homework.pdf (4 pages).
+Output written on homework.pdf (1 page).
