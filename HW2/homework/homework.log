@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.6.10)  28 OCT 2020 20:02
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.6.10)  31 OCT 2020 20:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1282,9 +1282,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 LaTeX Font Info:    Trying to load font information for U+esint on input line 39.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/esint/uesint.fd
 File: uesint.fd 
-) (./bib.tex [1
+) [1
 
-]
+] (./bib.tex [2]
 No file homework.bbl.
 )
 
@@ -1295,21 +1295,21 @@ See the caption package documentation for explanation.
 Package caption Warning: Unused \captionsetup[table] on input line 3.
 See the caption package documentation for explanation.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 51.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 51.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 100.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 100.
 (./homework.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 51.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 51.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 100.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 100.
 Package rerunfilecheck Info: File `homework.out' has not changed.
-(rerunfilecheck)             Checksum: 7513EBF3303FFCEE9768B7BB03651926;48.
+(rerunfilecheck)             Checksum: 3E8040E81C7D172E300FC9814F523416;144.
  ) 
 Here is how much of TeX's memory you used:
- 35218 strings out of 479418
- 688637 string characters out of 5884585
- 1282517 words of memory out of 5000000
- 51997 multiletter control sequences out of 15000+600000
+ 35230 strings out of 479418
+ 689454 string characters out of 5884585
+ 1285517 words of memory out of 5000000
+ 52009 multiletter control sequences out of 15000+600000
  543392 words of font info for 116 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 63i,5n,83p,1281b,335s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,6n,83p,1281b,436s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on homework.pdf (1 page).
+Output written on homework.pdf (2 pages).

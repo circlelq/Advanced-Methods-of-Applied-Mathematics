@@ -44,6 +44,55 @@
 	\mathrm{R}=\frac{1}{5} \times \frac{4}{5} \times \frac{1}{32^{2}}+O\left(\frac{1}{32^{3}}\right) \approx \frac{1}{25 \times 256} \approx \frac{1}{6 \times 1000}=\frac{10}{6} \times 10^{-4} \approx 1.7 \times 10^{-4}
 \end{equation}
 
+\section{2}
+
+\begin{equation}
+	36x^3 + (162 + 4\epsilon)x^2-24\epsilon x - 9\epsilon = 0.
+\end{equation}
+
+\begin{equation}
+	36x^2\left(x + \frac{9}{2}\right) = - \epsilon (4x^2 - 24x + 9)
+\end{equation}
+
+\begin{enumerate}
+	\item $x\not= 0$,
+	\begin{equation}
+		x + \frac{9}{2} = - \epsilon\left(\frac{1}{9}-\frac{2}{3x}+\frac{1}{4x^2}\right)
+	\end{equation}
+	$x_0 = -\frac{9}{2}$,
+	\begin{equation}
+		x_1 = -\epsilon\left(\frac{1}{9}-\frac{2}{3x_0}+\frac{1}{4x_0^2}\right) - \frac{9}{2} = - \frac{9}{2} - \frac{22}{81} \epsilon
+	\end{equation}
+	\item $x_0 = 0$,
+	\begin{equation}
+		x^2 = -\epsilon \frac{4x_0^2-24x_0+9}{36\left(x_0+\frac{9}{2}\right) }
+	\end{equation}
+	\begin{equation}
+		x_{2,3} = \pm \mi \frac{\sqrt{2\epsilon}}{6}
+	\end{equation}
+\end{enumerate}
+以上为一阶近似的3个解。
+
+\section{3}
+
+原式可化为
+\begin{equation}
+	\left(x-\frac{1}{2}\right)^2 = \epsilon \frac{x}{x+4},\ \epsilon = \frac{1}{8}
+\end{equation}
+$x_0 = \frac{1}{2}$
+\begin{equation}
+	\left(x_1-\frac{1}{2}\right)^2 = \frac{\epsilon}{9}
+\end{equation}
+\begin{equation}
+	x_{1,2} = \frac{1}{2} \pm \frac{\sqrt{2}}{12}
+\end{equation}
+
+
+
+
+
+
+
 \nocite{*}
 
 \input{bib.tex}
