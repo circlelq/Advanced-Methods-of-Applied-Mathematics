@@ -36,6 +36,117 @@
 
 \section{1}
 
+外部
+\begin{equation}
+	1 - (y'_0)^2,
+\end{equation}
+\begin{equation}
+	y'_0 = \pm 1.
+\end{equation}
+因为
+\begin{equation}
+	\lim_{x\to \infty} = 1,
+\end{equation}
+所以
+\begin{gather}
+	y'_0 = 1,\\
+	y_0 = x + C.
+\end{gather}
+第一项为$x$, 令$\xi = \frac{y}{\delta}$, 则
+\begin{equation}
+	\frac{\varepsilon}{\delta^3} \od[3]{y}{\xi} + \frac{\varepsilon}{\delta^2} y \od[2]{y}{\xi} + 1 - \frac{1}{\delta^2} \left(\od{y}{\xi}\right)^2 = 0
+\end{equation}
+
+\begin{enumerate}
+	\item $\frac{\varepsilon}{\delta^3} = \frac{\varepsilon}{\delta^2} \Rightarrow \delta = \varepsilon$, $\frac{1}{\delta^2}$ 不是小量,不符.
+	\item $\frac{\varepsilon}{\delta^3} = 1 \Rightarrow \delta = \varepsilon^{\frac{1}{3}}$, $\frac{\varepsilon}{\delta^2}$ 不是小量,不符.
+	\item $\frac{\varepsilon}{\delta^3} = \frac{1}{\delta^2} \Rightarrow \delta = \varepsilon$, $\frac{1}{\delta^2}$ 则有$\frac{\varepsilon}{\delta^3} \od[3]{y}{\xi} - \frac{1}{\delta^2} \left(\od{y}{\xi}\right)^2 = 0$
+	\item $\frac{\varepsilon}{\delta^2} = 1 \Rightarrow \delta = \varepsilon^{\frac{1}{2}}$, $\frac{\varepsilon}{\delta^3}$ 不是小量,不符.
+	\item $\frac{\varepsilon}{\delta^2} = \frac{1}{\delta^2} \Rightarrow \varepsilon = 1$, $\frac{1}{\delta^3}$ 不是小量,不符.
+\end{enumerate}
+边界条件:
+\begin{equation}
+	y_1(0) = y'_1(0) = 0.
+\end{equation}
+匹配条件:
+\begin{equation}
+	\lim_{\xi \to \infty} y_1 = \lim_{x \to \infty} y_0.
+\end{equation}
+
+
+
+
+
+\section{2}
+
+\subsection{}
+
+假设$y^{*}=a y$,$t^{*}=b t$,再引入参量$c$,由题意列方程组
+$$m \frac{a}{b^{2}}=c \varepsilon,$$
+$$\mu \frac{a}{b}=c,$$
+$$k a=c,$$
+$$\frac{m}{I} \frac{a}{b}=\varepsilon.$$
+
+求解后可得,需要做的尺度化为
+$$
+y^{*}=\frac{I}{\mu} y, \quad t^{*}=\frac{\mu}{k} t, \quad \varepsilon=\frac{m k}{\mu^{2}}.
+$$
+\subsection{}
+外部近似满足$y^{\prime}+y=0$,先算出外部近似解为
+$$
+y_{0}(t)=C \me^{-t}.
+$$
+
+引进$\xi \equiv t / \delta$,其中$\varepsilon \downarrow 0$时,$\delta(\varepsilon) \rightarrow 0$.再引进$y(\xi \delta, \varepsilon)=Y(\xi)$,可以得到
+$$
+\frac{\varepsilon}{\delta^{2}} \frac{d^{2} Y}{d \xi^{2}}+\frac{1}{\delta} \frac{d Y}{d \xi}+Y=0.
+$$
+在简化条件$\delta=\varepsilon$下,引进$y_{I}(\xi)=\lim _{\varepsilon \downarrow 0} Y(\xi)$,可以得到近似的内部方程
+$$
+\frac{d^{2} y_{I}}{d \xi^{2}}+\frac{d y_{I}}{d \xi}=0, \quad y_{I}(0)=0,\left.\quad \frac{d y_{I}}{d \xi}\right|_{\xi=0}=1.
+$$
+解得$y_{I}(\xi)=1-\me^{-\xi}$.
+
+最后经过匹配可以确定外部近似函数的系数为$C=1$,即外部近似函数
+$$
+y_{0}(t)=\me^{-t}.
+$$
+
+\subsection{}
+前面得到的两部分近似解都是比较符合实际情况的.本题的弹簧振子模型属于“强过阻尼”情况,首先总体曲线是类似于所得外部函数的指数衰减型,不会出现欠阻尼情况下的振动衰减,同时,初始时刻附近质量会有很大的速度,垂直偏离会有一个阶跃增长,该过程相对于后续过程是一个极快的过程,这些都是正如内部函数所展示的.
+
+关于题干中已给尺度化的正确性,特别是在$t$不太大的情况下,首先估计$y^*$的范围,从初始时刻到达到最大垂直偏离$y_{\max }^{*}$,该过程持续的时间$\Delta t$非常小,因此该短暂过程的平均速度很大,内部阻尼起最主要作用,它产生的反冲量$\mu \bar{u} \Delta t=\mu\left(y_{\max }^{*} / \Delta t\right) \Delta t=\mu y_{\max }^{*}$近似于抵消掉$I$,进而估计出$y_{\max }^{*}=I / \mu$.再考虑时间尺度,前述过程时间很短,可以忽略,假设垂直偏离衰减到某个很小的设定值需要$t_{\max }^{*}$,该过程（从达到最大垂直偏离到衰减到某个很小的设定值）中只有内部阻尼和弹力作用,且两者强度整体基本相当,因为过程始末的动量基本都为0,可以表达为
+$$
+\mu \frac{y_{\max }^{*}}{t_{\max }^{*}} \sim k \frac{y_{\max }^{*}}{2}.
+$$
+由此可以估计时间尺度为$t_{\max }^{*} \sim \mu / k$.
+
+\subsection{}
+在上一小题最后的匹配过程中,已经求得了
+$$
+\lim _{\varepsilon \downarrow 0} y_{0}(\eta \Theta)=1.
+$$
+这里
+$$
+\lim _{\varepsilon \downarrow 0} \frac{\Theta}{\delta}=\infty, \quad \lim _{\varepsilon \downarrow 0} \Theta=0, \quad \eta=\frac{t}{\Theta}.
+$$
+
+因此在整个区域对$t>0$都成立的复合解为
+$$
+y_{U}(t)=y_{0}(t)+y_{I}\left(\frac{t}{\delta}\right)-\lim _{\varepsilon \downarrow 0} y_{0}(\eta \Theta)=\me^{-t}+\left(1-\me^{-\frac{t}{\varepsilon}}\right)-1=\me^{-t}-\me^{-\frac{t}{\varepsilon}}.
+$$
+
+\subsection{}
+假设$m_{1}$和$m_{2}$是特征方程$\varepsilon m^{2}+m+1=0$的两个根,那么原方程在两个初始条件下的精确解为
+$$
+y(t)=\frac{\me^{m_{1} t}-\me^{m_{2} t}}{\left(m_{1}-m_{2}\right) \varepsilon}.
+$$
+
+对于方程$\varepsilon m^{2}+m+1=0$,在$0<\varepsilon \ll 1$的前提下,可以用级数方法得到一个近似解-1,再用初值迭代的逐次逼近方法得到另一个近似解$-\varepsilon^{-1}$,把这两个解代入到上面的结果中,可以得到$0<\varepsilon \ll 1$时的精确解为
+$$
+y(t)=\frac{\me^{-t}-\me^{-\frac{t}{\varepsilon}}}{(1-\varepsilon)} \approx \me^{-t}-\me^{-\frac{t}{\varepsilon}}.
+$$
+这与上一小题求得的复合解形式相同.
 
 
 

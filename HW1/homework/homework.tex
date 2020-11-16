@@ -36,11 +36,11 @@
 
 \section{P408.13}
 
-
+Ch. 14 Sec. 1 13
 
 \subsection{(a)}
 
-(38a)的物理意义是原来初始时刻位于$X$,并且具有相应速度$U$的微团,在时刻$t$的空间坐标.(38b)的物理意义是在时刻$t$位于$x$的具有速度$u$的微团在原来初始时刻位于$X$,所具有的速度$U$.
+(38a)的物理意义是原来初始时刻位于$X$,并且具有相应速度$U$的微团,在时刻$t$的空间坐标.(38b)的物理意义是在时刻$t$位于$x$的具有速度$u$的微团在原来初始时刻位于$X$,所具有的速度为$U$.
 
 \subsection{(b)}
 
@@ -131,15 +131,17 @@ $A$的物理意义是原来初始时刻位于$(X,U)$的微团在时刻$t$的速�
 		\frac{\dif }{\dif t}\iint_{R(t)} \Psi(x,u,t)\dif x\dif u = & \frac{\dif }{\dif t} \iint_{R(0)} \overline\Psi(X,U,t)\mathscr{J}(X,U,t)\dif X\dif U\\
 		= &  \iint_{R(0)} \left[ \pd{\overline\Psi(X,U,t)}{t} \mathscr{J} + \overline\Psi(X,U,t)\pd{\mathscr{J}}{t} \right] \dif X\dif U\\
 		= & \iint_{R(0)} \left[ \pd{\overline\Psi(X,U,t)}{t} \mathscr{J} + \overline\Psi(X,U,t)\mathscr{J}\frac{\partial a}{\partial u} \right] \dif X\dif U\\
-		= & \iint_{R(t)} \left[ \frac{\mathscr{D} \Psi(X,U,t)}{\mathscr{D} t}  + \Psi(X,U,t)\frac{\partial a}{\partial u} \right]\dif x\dif u
+		= & \iint_{R(t)} \left[ \frac{\mathscr{D} \Psi(x,u,t)}{\mathscr{D} t}  + \Psi(x,u,t)\frac{\partial a}{\partial u} \right]\dif x\dif u
 	\end{split}
 \end{equation}
 所以
 \begin{equation}
-	\frac{\mathscr{D} \Psi(X,U,t)}{\mathscr{D} t}  + \Psi(X,U,t)\frac{\partial a}{\partial u} = 0
+	\frac{\mathscr{D} \Psi(x,u,t)}{\mathscr{D} t}  + \Psi(x,u,t)\frac{\partial a}{\partial u} = 0
 \end{equation}
 
 \section{P416.4}
+
+Ch. 14 Sec. 2 4
 
 \subsection{(a)}
 
@@ -165,7 +167,7 @@ $A$的物理意义是原来初始时刻位于$(X,U)$的微团在时刻$t$的速�
 \end{equation}
 将上式中的物质导数用之前推导出的方程代替,并用方向符号写成
 \begin{equation}
-\iiint_{R} \frac{\partial (\rho \bm{v})}{\partial t} \dif \tau = \iiint_{R} \Big[\rho f + \nabla\cdot \bm{T} - \nabla\cdot(\rho \bm{v}\bm{v})\Big]\dif \tau
+\iiint_{R} \frac{\partial (\rho \bm{v})}{\partial t} \dif \tau = \iiint_{R} \Big[\rho \bm{f} + \nabla\cdot \bm{T} - \nabla\cdot(\rho \bm{v}\bm{v})\Big]\dif \tau
 \end{equation}
 因为区域$R$固定,上式左端对于时间的倒数可以提取到积分号外,并利用奥高公式,将$ \nabla\cdot$换为$ n\cdot$,则
 \begin{equation}
@@ -176,9 +178,11 @@ $A$的物理意义是原来初始时刻位于$(X,U)$的微团在时刻$t$的速�
 
 不难理解, $\rho v_iv_j$是通过控制面单位面积的动量通量。例如, $\rho u_1$是通过法向向量为$\bm{e}_1$面的质量通量，这部分质量通量携带的动量为$\rho u_1 \bm{u} \dif x_2 \dif x_3$.
 
-动量流量张量是由固定区域边界上的流入或流出得物质所携带的动量产生的.对该固定区域的作用与作用在该固定边界上的应力相似,动量流量本身也具有不同方向的分量,而动量流量张量的分量即表示动量流量本身的分量在指定坐标系下不同方向的分量.
+动量流量张量是由固定区域边界上的流入或流出的物质所携带的动量产生的.对该固定区域的作用与作用在该固定边界上的应力相似,动量流量本身也具有不同方向的分量,而动量流量张量的分量即表示动量流量本身的分量在指定坐标系下不同方向的分量.
 
 \section{P434.5}
+
+Sec. 14.4 5
 
 \subsection{(a)}
 

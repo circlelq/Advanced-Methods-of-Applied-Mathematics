@@ -1,10 +1,10 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.6.10)  14 NOV 2020 11:32
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.6.10)  16 NOV 2020 14:14
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**/Users/circle/Documents/博一上/高等应用数学/Advanced-Methods-of-Applied-Mathematics/HW3/homework/homework
-(/Users/circle/Documents/博一上/高等应用数学/Advanced-Methods-of-Applied-Mathematics/HW3/homework/homework.tex
+**/Users/circle/Documents/博一上/高等应用数学/Advanced-Methods-of-Applied-Mathematics/HW4/homework/homework
+(/Users/circle/Documents/博一上/高等应用数学/Advanced-Methods-of-Applied-Mathematics/HW4/homework/homework.tex
 LaTeX2e <2020-02-02> patch level 5
 L3 programming layer <2020-03-06> (/usr/local/texlive/2020/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
@@ -1284,7 +1284,7 @@ LaTeX Font Info:    Trying to load font information for U+esint on input line 40
 File: uesint.fd 
 ) [1
 
-] [2] (./bib.tex [3] [4]
+] [2] (./bib.tex [3]
 No file homework.bbl.
 )
 
@@ -1295,21 +1295,31 @@ See the caption package documentation for explanation.
 Package caption Warning: Unused \captionsetup[table] on input line 3.
 See the caption package documentation for explanation.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 157.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 157.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 195.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 195.
 (./homework.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 157.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 157.
-Package rerunfilecheck Info: File `homework.out' has not changed.
-(rerunfilecheck)             Checksum: B04DF8785CDDD0926862BA45ECBA55F2;341.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 195.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 195.
+
+
+Package rerunfilecheck Warning: File `homework.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `homework.out':
+(rerunfilecheck)             Before: 3DAEBC80677E3FEC731F4AA1D03CBC56;243
+(rerunfilecheck)             After:  A7DA509E4D685CCFC48FF82C823A69DA;291.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 35269 strings out of 479418
- 691990 string characters out of 5884585
- 1288517 words of memory out of 5000000
- 52047 multiletter control sequences out of 15000+600000
+ 35276 strings out of 479418
+ 691380 string characters out of 5884585
+ 1287517 words of memory out of 5000000
+ 52054 multiletter control sequences out of 15000+600000
  543400 words of font info for 117 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  63i,8n,83p,1281b,342s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on homework.pdf (4 pages).
+Output written on homework.pdf (3 pages).
