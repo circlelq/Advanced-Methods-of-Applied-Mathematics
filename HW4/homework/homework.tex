@@ -35,9 +35,9 @@
 \maketitle
 
 \section{1}
-Ch. 11 Sec. 11.3 Prom. 3
+Sec. 11.2 3
 
-$\ddot{y} + \epsilon\dot{y} + y = 0,\ y(0)=0,\ \dot{y}(0)=1$
+$\ddot{y} + \epsilon\dot{y}^3 + y = 0,\ y(0)=0,\ \dot{y}(0)=1$
 
 忽略小量$\epsilon$，则$y=\sin(t)$。
 
@@ -49,7 +49,7 @@ $\dot{y}(t,\tau) = f^{(0)}_1(t,\tau) + \epsilon ( f^{(1)}_1(t,\tau) + f^{(0)}_2(
 
 $\ddot{y}(t,\tau) = f^{(0)}_{11}(t,\tau) + \epsilon ( f^{(1)}_{11}(t,\tau) + 2f^{(0)}_{12}(t,\tau) ) + O(\epsilon^2)$
 
-$\ddot{y} + \epsilon\dot{y} + y = f^{(0)}_{11}(t,\tau) + f^{(0)}(t,\tau) + \epsilon ( f^{(1)}_{11}(t,\tau) + 2f^{(0)}_{12}(t,\tau) + f^{(0)}_1(t,\tau) + f^{(1)}(t,\tau) )  + O(\epsilon^2) = 0 $
+$\ddot{y} + \epsilon\dot{y}^3 + y = f^{(0)}_{11}(t,\tau) + f^{(0)}(t,\tau) + \epsilon ( f^{(1)}_{11}(t,\tau) + 2f^{(0)}_{12}(t,\tau) + f^{(0)}_1(t,\tau) + f^{(1)}(t,\tau) )^3  + O(\epsilon^2) = 0 $
 
 初始边界条件$f^{(0)}(0,0)=f^{(1)}(0,0)=\cdots=0$，$f^{(0)}_1(0,0)=1$，$f^{(1)}_1(0,0)+f^{(0)}_2(0,0)=0$， $\cdots$
 
@@ -59,7 +59,7 @@ $\ddot{y} + \epsilon\dot{y} + y = f^{(0)}_{11}(t,\tau) + f^{(0)}(t,\tau) + \epsi
 	\left\{
 	\begin{array}{lll}
 	0&=f^{(0)}_{11}(t,\tau) + f^{(0)}(t,\tau)=-A(\tau) \sin(t) + A(\tau) \sin(t)\\
-	0&=f^{(1)}_{11}(t,\tau) + 2f^{(0)}_{12}(t,\tau) + f^{(0)}_1(t,\tau) + f^{(1)}(t,\tau)\\
+	0&=f^{(1)}_{11}(t,\tau) + 2f^{(0)}_{12}(t,\tau) + f^{(0)3}_1(t,\tau) + f^{(1)}(t,\tau)\\
 	&=f^{(1)}_{11}(t,\tau) + f^{(1)}(t,\tau) + A(\tau)^3 \cos^3(t) + 2A^\prime(\tau) \cos(t)
 	\end{array}
 	\right.
@@ -79,7 +79,7 @@ $3A^3/4+2A^\prime=0$ 且 $A(0)=1$。
 
 
 \section{3}
-Ch. 11 Sec. 11.3 Prob.7 
+Sec. 11.2 7 
 
 \subsection{}
 

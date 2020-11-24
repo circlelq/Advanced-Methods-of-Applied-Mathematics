@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.6.10)  14 NOV 2020 11:32
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.6.10)  16 NOV 2020 22:46
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1267,19 +1267,19 @@ LaTeX Font Info:    Trying to load font information for OT1+bch on input line 36
  (/usr/local/texlive/2020/texmf-dist/tex/latex/psnfss/ot1bch.fd
 File: ot1bch.fd 2004/10/18 font definitions for OT1/bch.
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 40.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 42.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+esint on input line 40.
+LaTeX Font Info:    Trying to load font information for U+esint on input line 42.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/esint/uesint.fd
 File: uesint.fd 
 ) [1
@@ -1295,11 +1295,11 @@ See the caption package documentation for explanation.
 Package caption Warning: Unused \captionsetup[table] on input line 3.
 See the caption package documentation for explanation.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 157.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 157.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 158.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 158.
 (./homework.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 157.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 157.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 158.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 158.
 Package rerunfilecheck Info: File `homework.out' has not changed.
 (rerunfilecheck)             Checksum: B04DF8785CDDD0926862BA45ECBA55F2;341.
  ) 
@@ -1310,6 +1310,6 @@ Here is how much of TeX's memory you used:
  52047 multiletter control sequences out of 15000+600000
  543400 words of font info for 117 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 63i,8n,83p,1281b,342s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 63i,8n,83p,1281b,341s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on homework.pdf (4 pages).

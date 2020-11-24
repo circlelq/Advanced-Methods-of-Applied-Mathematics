@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.6.10)  16 NOV 2020 14:14
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.6.10)  17 NOV 2020 09:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1300,23 +1300,13 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 195.
 (./homework.aux)
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 195.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 195.
-
-
-Package rerunfilecheck Warning: File `homework.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `homework.out':
-(rerunfilecheck)             Before: 3DAEBC80677E3FEC731F4AA1D03CBC56;243
-(rerunfilecheck)             After:  A7DA509E4D685CCFC48FF82C823A69DA;291.
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+Package rerunfilecheck Info: File `homework.out' has not changed.
+(rerunfilecheck)             Checksum: A7DA509E4D685CCFC48FF82C823A69DA;291.
  ) 
 Here is how much of TeX's memory you used:
  35276 strings out of 479418
  691380 string characters out of 5884585
- 1287517 words of memory out of 5000000
+ 1286517 words of memory out of 5000000
  52054 multiletter control sequences out of 15000+600000
  543400 words of font info for 117 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191

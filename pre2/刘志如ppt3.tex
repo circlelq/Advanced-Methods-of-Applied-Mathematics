@@ -1,0 +1,185 @@
+\documentclass{beamer}
+\usepackage{CJK}
+\usefonttheme[onlymath]{serif}
+\usepackage[greek,english]{babel}
+\usepackage{bm}
+
+\begin{document}
+\begin{CJK}{UTF8}{song}
+
+\begin{frame}[allowframebreaks]
+\frametitle{傅里叶级数简单示例}
+
+方形波函数
+\begin{equation}
+S(x)=\frac{4}{\pi}\left(\sin x+\frac{1}{3} \sin 3 x+\frac{1}{5} \sin 5 x+\cdots\right)
+\end{equation}
+
+绝对值函数
+\begin{equation}
+C(x)=|x|=\pi-\frac{4}{\pi}\left(\frac{\cos x}{1^{2}}+\frac{\cos 3 x}{3^{2}}+\frac{\cos 5 x}{5^{2}}+\cdots\right)
+\end{equation}
+
+\begin{equation}
+C^{\prime}(x)=S(x)
+\end{equation}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{傅里叶级数的积分和微分}
+
+分段光滑的函数可用下面的傅里叶级数表示
+\begin{equation}
+f(x)=\frac{a_{0}}{2}+\sum_{n=1}^{\infty}\left(a_{n} \cos n x+b_{n} \sin n x\right)
+\end{equation}
+
+形式积分
+\begin{equation}
+\int_{0}^{x} f(t) d t-\frac{a_{0}}{2} x \sim \sum_{n=1}^{\infty}\left[\frac{a_{n}}{n} \sin n x+\frac{b_{n}}{n}(1-\cos n x)\right]
+\end{equation}
+
+可用下式验证
+\begin{equation}
+\int_{0}^{x} f(t) d t-\frac{a_{0}}{2} x=\frac{A_{0}}{2}+\sum_{n=1}^{\infty}\left(A_{n} \cos n x+B_{n} \sin n x\right)
+\end{equation}
+
+形式微分
+\begin{equation}
+f^{\prime}(x) \sim 0+\sum_{n=1}^{\infty}\left(-n a_{n} \sin n x+n b_{n} \cos n x\right)
+\end{equation}
+
+若用下式验证
+\begin{equation}
+\frac{a_{0}^{\prime}}{2}+\sum_{n=1}^{\infty}\left(a_{n}^{\prime} \cos n x+b_{n}^{\prime} \sin n x\right)
+\end{equation}
+
+得约束条件之一
+\begin{equation}
+f(\pi)=f(-\pi)
+\end{equation}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{吉布斯现象}
+
+部分和在间断点附近出现称作吉布斯现象的异常行为
+
+以方波函数为例，可证明，仅当N趋于无穷时，部分和才会趋近于极限值
+
+\begin{equation}
+S_{N}(x) \approx \frac{2}{\pi} \int_{0}^{m x} \frac{\sin \eta}{\eta} \frac{\eta / 2 m}{\sin (\eta / 2 m)} d \eta
+\end{equation}
+
+其中
+\begin{equation}
+m=N+\frac{1}{2}
+\end{equation}
+
+\begin{equation}
+S_{\max }=\frac{2}{\pi}\left(\int_{0}^{\left(N+\frac{1}{2}\right) x} \frac{\sin \eta}{\eta} d \eta\right)_{\max } \approx 1.179
+\end{equation}
+
+（这里麻烦circle抠一下128页中间的那三张配图，仅图片即可，谢谢）
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{具有最小二乘误差的近似}
+
+均方误差取极小值
+\begin{equation}
+M=\frac{1}{2 \pi} \int_{-\pi}^{\pi} \varepsilon_{N}^{2} d x
+\end{equation}
+
+\begin{equation}
+\varepsilon_{N}=f(x)-\sum_{n=-N}^{N} \gamma_{n} e^{i n x}
+\end{equation}
+
+必要条件
+\begin{equation}
+\gamma_{n}=\frac{1}{2 \pi} \int_{-\pi}^{\pi} f(x) e^{-i n x} d x
+\end{equation}
+
+充分条件
+\begin{equation}
+c_{n}=\gamma_{n}
+\end{equation}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{具有最小二乘误差的近似}
+
+最小二乘法可推广
+
+正交条件
+\begin{equation}
+\int_{-\pi}^{\pi} \phi_{m}(x) \phi_{n}(x) w(x) d x=\delta_{m n}
+\end{equation}
+
+其中w为非负的权函数
+
+加权均方误差取最小值
+\begin{equation}
+\varepsilon_{N}=f(x)-\sum_{n=0}^{N} \gamma_{n} \phi_{n}(x)
+\end{equation}
+
+\begin{equation}
+M_{w}=\frac{\int_{-\pi}^{\pi} \varepsilon_{N}^{2}(x) w(x) d x}{\int_{-\pi}^{\pi} w(x) d x}
+\end{equation}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{贝塞尔不等式和Parseval定理}
+
+\begin{equation}
+M=\left\langle f^{2}\right\rangle-\sum_{n=-N}^{N}\left|c_{n}\right|^{2}+\sum_{n=-N}^{N}\left|c_{n}-\gamma_{n}\right|^{2}
+\end{equation}
+
+由于条件$c_{n}=\gamma_{n}$和$M \geq 0$
+
+\begin{equation}
+\sum_{n=-N}^{N}\left|c_{n}\right|^{2} \leq\left\langle f^{2}\right\rangle
+\end{equation}
+
+假如除了有限多个间断点意外，傅里叶级数按点态方式收敛，则
+\begin{equation}
+\lim _{N \rightarrow \infty} M=0
+\end{equation}
+
+\begin{equation}
+\sum_{n=-\infty}^{\infty}\left|c_{n}\right|^{2}=\left\langle f^{2}\right\rangle
+\end{equation}
+
+Riesz-Fischer定理是Parseval定理的逆问题
+\begin{equation}
+\frac{1}{2} a_{0}^{2}+\sum_{m=1}^{\infty}\left(a_{m}^{2}+b_{m}^{2}\right)
+\end{equation}
+
+\begin{equation}
+\frac{a_{0}}{2}+\sum_{m=1}^{\infty}\left(a_{m} \cos m x+b_{m} \sin m x\right)
+\end{equation}
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Parseval定理的应用举例}
+
+根据普朗克辐射定律计算斯蒂芬辐射常数时，需要计算积分
+\begin{equation}
+I=\int_{0}^{\infty} \frac{x^{3}}{e^{x}-1} d x
+\end{equation}
+
+\begin{equation}
+1+\frac{1}{3^{4}}+\frac{1}{5^{4}}+\cdots=\frac{\pi^{4}}{96}
+\end{equation}
+
+\begin{equation}
+I=\Gamma(4)\left(1+\frac{1}{2^{4}}+\frac{1}{3^{4}}+\cdots\right)
+\end{equation}
+
+\begin{equation}
+I=\frac{\frac{\pi^{4}}{96}}{1-\frac{1}{2^{4}}} \times 6=\frac{\pi^{4}}{15}
+\end{equation}
+\end{frame}
+
+\end{CJK}
+\end{document}}

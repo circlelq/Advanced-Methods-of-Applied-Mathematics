@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{热传导方程}{3}{0}{1}
+\beamer@sectionintoc {2}{分离变量法}{17}{0}{2}
+\beamer@sectionintoc {3}{傅立叶定理}{25}{0}{3}
+\beamer@sectionintoc {4}{傅立叶级数的性质}{36}{0}{4}
