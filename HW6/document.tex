@@ -1,0 +1,18 @@
+\documentclass[UTF8]{ctexart}
+
+\CTEXsetup[format={\Large\bfseries}]{section}
+\usepackage{graphicx}
+
+\begin{document}
+	
+	\section{第6题}
+	这是一个可以求解的方程，根据初始条件我们可以得到解为：
+	\[f=\left ( 1-\frac{\varepsilon }{\pi ^{2}}\right )cos\left ( \pi x\right )+\frac{\varepsilon }{\pi ^{2}}+\left ( \frac{-1}{\pi ^{3}-\pi }\right )sin\left ( \pi x\right )+\frac{1}{\pi ^{2}-1}sinx\]
+	取$\varepsilon=0$与$\varepsilon=0.1$对比得到图像：
+	
+	\includegraphics[width = 1.3\textwidth]{0.1.jpg}
+	
+	在原式中$\varepsilon=$在大部分时候绝对值都小于$sinx$，正如书上所说，无害的非正统函数的一种情形，也就是振荡项具有相对大的绝对值，只在狭小区域内会被超越，这种具有非正统的小区间在这个例子中可以忽略。根据图像也可以看到只在各个极小值处能表现出一些分离的情况
+
+	
+\end{document}

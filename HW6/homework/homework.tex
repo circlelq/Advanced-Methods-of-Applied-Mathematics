@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\input{/Users/circle/Documents/博一上/homework/setting.tex}
+\setcounter{secnumdepth}{2}
+\usepackage{bm}
+\usepackage{autobreak}
+\usepackage{amsmath}
+\setlength{\parindent}{2em}
+
+
+%pdf文件设置
+\hypersetup{
+	pdfauthor={袁磊祺},
+	pdftitle={高等应用数学作业6}
+}
+
+\title{
+		\vspace{-1in} 	
+		\usefont{OT1}{bch}{b}{n}
+		\normalfont \normalsize \textsc{\LARGE Peking University}\\[1cm] % Name of your university/college \\ [25pt]
+		\horrule{0.5pt} \\[0.5cm]
+		\huge \bfseries{高等应用数学作业6} \\
+		\horrule{2pt} \\[0.5cm]
+}
+\author{
+		\normalfont 								\normalsize
+		第二组\quad 袁磊祺 \quad 刘志如 \quad 宋庭鉴 \quad 岐亦铭 \quad 董淏翔 \quad 周子铭 \quad 撒普尔\\	\normalsize
+        \today
+}
+\date{}
+
+\begin{document}
+
+\input{setc.tex}
+
+\maketitle
+
+\section{Sec. 6.3 Pro. 6}
+这是一个可以求解的方程,根据初始条件我们可以得到解为：
+\begin{equation}
+	y(x,\varepsilon)=\left ( 1-\frac{\varepsilon }{\pi ^{2}}\right )\cos\left ( \pi x\right )+\frac{\varepsilon }{\pi ^{2}}+\left ( \frac{-1}{\pi ^{3}-\pi }\right )\sin \left ( \pi x\right )+\frac{1}{\pi ^{2}-1}\sin x,
+\end{equation}
+取$\varepsilon=0$与$\varepsilon=0.1$对比得到图像：
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=8cm]{../1}
+	\caption{函数图像}
+	\label{fig:1}
+\end{figure}
+
+
+在原式中$\varepsilon$在大部分时候绝对值都小于$\sin x$,正如书上所说,无害的非正统函数的一种情形,也就是振荡项具有相对大的绝对值,只在狭小区域内会被超越,这种具有非正统的小区间在这个例子中可以忽略.根据图像也可以看到只在各个极小值处能表现出一些分离的情况.
+
+
+\section{Sec. 6.3 Pro. 8}
+
+\subsection{}
+
+$V$充分小时,空气阻力不会很大,由此阻力相对与重力是小量,可以不考虑阻力的影响.
+
+初始时刻速度最大：
+\begin{equation}
+	\frac{\dif x^*}{\dif t^*}(0) = V = \frac{\dif x^*}{\dif t^*}_{\max}	,
+\end{equation}
+位移尺度与抛射问题相同量级：	
+\begin{equation}
+	x^*_{\max}\sim O\left(\frac{V^2}{g}\right),
+\end{equation}
+时间尺度：
+\begin{equation}
+	T = \frac{|x^*_{\max}|}{|\frac{\dif x^*}{\dif t^*}_{\max}|}\sim O\left(\frac{V}{g}\right).
+\end{equation}
+所以
+\begin{equation}
+	x = \frac{x^*}{V^2/g},\quad t = \frac{t^*}{V/g},
+\end{equation}
+同(16)式.
+	
+\subsection{}
+
+\begin{equation}
+	\frac{\dif \,\! ^2x}{\dif t^2} + \beta \frac{\dif x}{\dif t} + 1 = 0,\quad x(0) = 0,\quad \frac{\dif x}{\dif t}(0) = 1,
+\end{equation}
+$\beta=\frac{kV}{mg}$: 空气阻力与重力权重比值.其大小反映抛射问题中空气阻力的显著程度.
+
+
+
+
+\nocite{*}
+
+\input{bib.tex}
+
+\end{document}
