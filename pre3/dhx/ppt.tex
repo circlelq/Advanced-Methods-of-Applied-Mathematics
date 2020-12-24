@@ -1,0 +1,128 @@
+\documentclass[12pt]{beamer}
+
+\usepackage[UTF8]{ctex}
+\usepackage{bm}
+\usepackage{cleveref}
+\usepackage{hyperref}
+\usetheme[progressbar=frametitle]{metropolis}
+
+
+
+\begin{document}
+
+\begin{frame}[allowframebreaks]{6.6多目标优化模型}
+例6-58  设商店有糖果A1,A2,A3，价格分别为4，2.8，2.4元/kg。要求购买不超过20元，总重不超过6kg。A1+A2总重不少于3kg，如何购买？
+\\应该设立两个目标函数，一个是花钱最少，一个是重量最总，其他条件可以认为是约束条件。假设购买三种糖果的重量分别为x1, x2, x3kg，这时目标函数分别为
+\\花钱：$f_1(x) = 4x_1+2.8x_2+2.4x_3 \rightarrow min$
+\\重量：$f_2(x) = x_1+x_2+x_3 \rightarrow max$ 
+那么模型该如何设立呢？
+\end{frame}
+\begin{frame}[allowframebreaks]{多目标优化模型}
+	\qquad min\qquad \qquad \qquad \qquad \qquad
+	$
+	\left[
+	\begin{array}{ccc}
+	4x_1+2.8x_2+2.4x_3	\\
+	x_1+x_2+x_3	
+	\end{array} 
+	\right]
+	$
+	\\
+	$
+	\textbf{x}\;s.t.
+	\left\{
+	\begin{array}{ccc}
+	4x_1+2.8x_2+2.4x_3\leq20\\
+	x_1+x_2+x_3\geq6\\
+	x_1+x_2\geq3 \\
+	x_1,x_2,x_3\geq0 
+	\end{array} 
+	\right.
+	$
+	\\从这之中我们可以得出多目标优化模型的一般表示形式：
+	$$ \qquad \ J\qquad = \qquad min\qquad \textbf{F(x)}$$
+	$$ \textbf{x} s.t.  \textbf{G(x)}\leq0$$
+	其中，$\textbf{F(x)} = [f_1(\textbf{x}),f_2(\textbf{x}),f_3(\textbf{x}),\cdot \cdot \cdot,f_p(\textbf{x})]^T$
+\end{frame}
+\begin{frame}[allowframebreaks]{多目标问题转化为单目标问题求解}
+	那么如何解这类问题呢？
+	\\下面介绍三种转换方法:
+	
+	\\ \qquad (1)线性加权变换及求解
+	\\ \qquad (2)线性规划问题的最佳妥协解
+	\\ \qquad (3)线性规划问题的最小二乘解
+\end{frame}
+\begin{frame}[allowframebreaks]{(1)线性加权变换及求解}
+	根据两个指标的侧重情况引入加权，目标函数改写为：
+	$$f(\textbf{x}) = w_1f_1(\textbf{x})+ w_2f_2(\textbf{x})+ w_3f_3(\textbf{x})+\cdot \cdot \cdot+w_pf_p(\textbf{x})$$
+	其中，$w_1+w_2+\cdot \cdot \cdot+w_p=1$, $0\leq w_1,w_2,\cdot \cdot \cdot,w_p\leq 1$.	
+	\\则例6-58就可以改写成下面的线性规划系数\\
+	\qquad min\qquad \qquad \qquad \qquad \qquad
+	$(w_1[4,2.8,2.4]-w_2[1,1,1])\textbf{x}$
+	\\
+	$
+	\textbf{x}\;s.t.
+	\left\{
+	\begin{array}{ccc}
+		4x_1+2.8x_2+2.4x_3\leq20\\
+		x_1+x_2+x_3\geq6\\
+		x_1+x_2\geq3 \\
+		x_1,x_2,x_3\geq0 
+	\end{array} 
+	\right.
+	$
+	\\(演示将在Matlab上进行)
+\end{frame}
+
+\begin{frame}[allowframebreaks]{(2)线性规划问题的最佳妥协解}
+	考虑一类特殊的线性规划问题\\
+	$$\quad \textbf{J} = \qquad max \qquad \textbf{Cx}$$
+		$$
+	\textbf{x}\;s.t.
+	\left\{
+	\begin{array}{ccc}
+		Ax\leq B\\
+		A_{eq}x=B_{eq}\\
+		x_m\leq x\leq x_M
+	\end{array} 
+	\right.
+	$$
+	%此处的A，B，x应该加粗但是不知道咋回事，加粗不了
+	目标函数的\textbf{C}不是一个向量，而是一个矩阵。
+	\\每一个目标函数$j_i(x) = c_ix,i=1,2,\cdot \cdot \cdot , p$,可以理解为第i方的利益分配，所以这样的最优化问题可以认为是各方利益的最大分配。
+	\\最佳妥协解的求解步骤如下：
+	\\1. 单独求解每个单目标函数的最优化问题，得出最优解$f_k, k=1,2,\cdot \cdot \cdot , p$
+	\\2. 通过规范化构造单独的目标函数
+	$$f(x) = -\frac{1}{f_1}c_1x-\frac{1}{f_2}c_2x-\cdot \cdot \cdot -\frac{1}{f_p}c_px$$
+	3. 最佳妥协解可以变换成下面的单目标限性规划问题并直接求解
+	$$\quad \textbf{J} = \qquad max \qquad \textbf{f(x)}$$
+	$$
+	\textbf{x}\;s.t.
+	\left\{
+	\begin{array}{ccc}
+		Ax\leq B\\
+		A_{eq}x=B_{eq}\\
+		x_m\leq x\leq x_M
+	\end{array} 
+	\right.
+	$$
+\end{frame}
+
+\begin{frame}[allowframebreaks]{(3)线性规划问题的最小二乘解}
+	考虑下面多目标线性规划问题的最小二乘表示
+		$$\quad \qquad max \qquad \frac{1}{2}||Cx-d||^2$$
+	$$
+	\textbf{x}\;s.t.
+	\left\{
+	\begin{array}{ccc}
+		Ax\leq B\\
+		A_{eq}x=B_{eq}\\
+		x_m\leq x\leq x_M
+	\end{array} 
+	\right.
+	$$
+	则最小二乘解可以由$x = lsqlin(C,d,A,B,A_{eq},B_{eq},x_m,x_M,x_0,options)$函数直接得到。
+
+\end{frame}
+
+\end{document}

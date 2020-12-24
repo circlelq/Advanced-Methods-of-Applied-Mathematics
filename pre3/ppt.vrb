@@ -1,0 +1,24 @@
+\frametitle{一般非线性规划问题的求解}
+\begin{block}{MATLAB代码}
+\begin{lstlisting}
+ff8_0 = optimset; ff8_0.LargeScale = 'off'; ff8_0.Display = 'iter';
+ff8_0.TolX = 1e-15; ff8_0.TolFun = 1e-30; ff8_0.TolCon = 1e-20;
+x0=ones(3,1); xm=zeros(3,1); xM=[]; A=[]; B=[]; Aeq=[]; Beq=[];
+[x,f_opt,flag,c] = fmincon(@opt_fun1, x0, A, B, Aeq, Beq, xm, xM, @opt_con1, ff8_0)
+\end{lstlisting}^^I^^I
+^^I\end{block}^^I
+^^I
+^^I\begin{block}{输出}
+\begin{lstlisting}
+x =
+3.5121
+0.2170
+3.5522
+
+f_opt =
+961.7152
+
+iterations: 16
+\end{lstlisting}^^I^^I
+^^I\end{block}^^I
+

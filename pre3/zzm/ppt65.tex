@@ -1,0 +1,182 @@
+\documentclass[12pt]{beamer}
+
+\usepackage[UTF8]{ctex}
+\usepackage{bm}
+\usepackage{cleveref}
+\usepackage{hyperref}
+\usetheme[progressbar=frametitle]{metropolis}
+
+
+
+\begin{document}
+
+\begin{frame}[allowframebreaks]{6.5.1线性矩阵不等式}
+线性矩阵不等式具有一般的描述形式
+\\$\boldsymbol{F}\left ( x\right )=\boldsymbol{F}_{0}+x_{1}\boldsymbol{F}_{1}+\cdots +x_{m}\boldsymbol{F}_{m}< 0$
+\\其中：$\boldsymbol{x}=\left [ x_{1},x_{2},\cdots x_{m},\right ]^{T}$ ，为多项式向量，$\boldsymbol{F}_{1}$为实对称矩阵或者复Hermite矩阵。
+
+矩阵小于零表示矩阵负定。有$\boldsymbol{x}$解集为凸集，即：
+\\$ \boldsymbol{F}\left [ \alpha \boldsymbol{x}_{1}+\left ( 1-\alpha \right )\boldsymbol{x}_{2}\right ]=\alpha \boldsymbol{F}\left ( \boldsymbol{x}_{1} \right ) +\left ( 1-\alpha \right )\boldsymbol{F}\left ( \boldsymbol{x}_{2} \right )< 0$
+\\其中$0< \alpha < 1$，该解称为可行解。
+
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]{6.5.1线性矩阵不等式}
+若有$\boldsymbol{F}_{1}\left ( x\right )< 0$与$\boldsymbol{F}_{2}\left ( x\right )< 0$则
+
+\[\begin{bmatrix}
+\boldsymbol{F}_{1}\left ( x\right ) & 0\\ 
+0 & \boldsymbol{F}_{2}\left ( x\right )
+\end{bmatrix}< 0\]
+同理有系列$\boldsymbol{F}_{i}\left ( x\right )< 0$, $i=1,2,...,k$
+可有\[\boldsymbol{F}\left ( x\right )=\begin{bmatrix}
+\boldsymbol{F}_{1}\left ( x\right ) &  &  & \\ 
+&  \boldsymbol{F}_{2}\left ( x\right ) & & \\ 
+&  & \cdots & \\ 
+&  &  & \boldsymbol{F}_{k}\left ( x\right )
+\end{bmatrix}< 0\]
+\end{frame}
+
+\begin{frame}[allowframebreaks]{6.5.2Lyapunov不等式}
+若给定正定矩阵$\boldsymbol{Q}$，有Lyapunov方程：
+\\$\boldsymbol{A}^{T}\boldsymbol{X}+\boldsymbol{X}\boldsymbol{A}=-\boldsymbol{Q}$
+\\若存在正定的解$\boldsymbol{X}$则该系统稳定。上述问题很自然地表示成对Lyapunov不等式的求解\[\boldsymbol{A}^{T}\boldsymbol{X}+\boldsymbol{X}\boldsymbol{A}< 0\]
+$\boldsymbol{X}$是对称矩阵，可以用一个$n\left ( n+1\right )/2$哥元素组成的向量$\boldsymbol{x}$描述：
+\[x_{i-j+1+\left ( 2n-j+2\right )\left ( j-1\right )/2}=X_{i,j}\]
+其中$j=1,..,n$而$i=j,...,n$。
+\end{frame}
+
+\begin{frame}[allowframebreaks]{6.5.2Lyapunov不等式}
+接着便可以将\[\boldsymbol{A}^{T}\boldsymbol{X}+\boldsymbol{X}\boldsymbol{A}< 0\]
+转化为\[\begin{bmatrix}
+\boldsymbol{F}_{1} &  &  & \\ 
+& \boldsymbol{F}_{2} &  & \\ 
+&  & \cdots  & \\ 
+&  &  & \boldsymbol{F}_{\frac{n\left ( n+1\right )}{2}}
+\end{bmatrix}\cdot \boldsymbol{x}=\boldsymbol{F}\left ( \boldsymbol{x}\right )< 0 \]
+matlab中用F
+\end{frame}
+
+\begin{frame}[allowframebreaks]{6.5.2一般代数Riccati不等式}
+我们知道若\[\boldsymbol{F}\left ( \boldsymbol{x}\right )=\begin{bmatrix}
+\boldsymbol{F}_{11}\left ( \boldsymbol{x}\right ) & \boldsymbol{F}_{12}\left ( \boldsymbol{x}\right )\\ 
+\boldsymbol{F}_{21}\left ( \boldsymbol{x}\right ) & \boldsymbol{F}_{22}\left ( \boldsymbol{x}\right )
+\end{bmatrix}\]是负定的，则有一下三个等价表达：
+\[\boldsymbol{F}\left ( \boldsymbol{x}\right )< 0\]\[\boldsymbol{F}_{11}\left ( \boldsymbol{x}\right )< 0,\boldsymbol{F}_{22}\left ( \boldsymbol{x}\right )-\boldsymbol{F}_{21}\left ( \boldsymbol{x}\right )\boldsymbol{F}_{11}^{-1}\left ( \boldsymbol{x}\right )\boldsymbol{F}_{12}\left ( \boldsymbol{x}\right )< 0\]\[\boldsymbol{F}_{22}\left ( \boldsymbol{x}\right )< 0,\boldsymbol{F}_{11}\left ( \boldsymbol{x}\right )-\boldsymbol{F}_{12}\left ( \boldsymbol{x}\right )\boldsymbol{F}_{22}^{-1}\left ( \boldsymbol{x}\right )\boldsymbol{F}_{21}\left ( \boldsymbol{x}\right )< 0\]
+\end{frame}
+
+\begin{frame}[allowframebreaks]{6.5.2一般代数Riccati不等式}
+对于更复杂的Riccati方程变换可以得到Riccati不等式
+\[\boldsymbol{A}^{T}\boldsymbol{X}+\boldsymbol{X}\boldsymbol{A}+\left ( \boldsymbol{X}\boldsymbol{B}-\boldsymbol{C}^{T}\right )\boldsymbol{R}^{-1}\left ( \boldsymbol{X}\boldsymbol{B}-\boldsymbol{C}^{T}\right )^{T}< 0\]
+对比
+\[\boldsymbol{F}_{22}\left ( \boldsymbol{x}\right )< 0,\boldsymbol{F}_{11}\left ( \boldsymbol{x}\right )-\boldsymbol{F}_{12}\left ( \boldsymbol{x}\right )\boldsymbol{F}_{22}^{-1}\left ( \boldsymbol{x}\right )\boldsymbol{F}_{21}\left ( \boldsymbol{x}\right )< 0\]
+可等价构建为
+\[\boldsymbol{X}> 0,\begin{bmatrix}
+\boldsymbol{A}^{T}\boldsymbol{X}+\boldsymbol{X}\boldsymbol{A} & \boldsymbol{XB}-\boldsymbol{C}^{T}\\ 
+\boldsymbol{B}^{T}\boldsymbol{X}-\boldsymbol{C}& -\boldsymbol{R}
+\end{bmatrix}< 0\]
+\end{frame}
+\begin{frame}[allowframebreaks]{6.5.3线性矩阵不等式问题分类}
+(1)可行性问题,即：
+\[\boldsymbol{F}\left ( \boldsymbol{x}\right )< 0\]
+存在解
+
+(2)线性目标函数最优化问题，即求：
+\\	\qquad \qquad\qquad\qquad\qquad\qquad min  
+$
+\boldsymbol{c}^{T}\boldsymbol{x}
+$
+\\\qquad\qquad\qquad\qquad\qquad
+$
+\boldsymbol{x}\;s.t.
+\boldsymbol{F}\left ( \boldsymbol{x}\right )< 0
+$
+
+(3)广义特征值最优化问题，即求：
+
+	\qquad \qquad\qquad\qquad\qquad\qquad min 
+$
+\lambda 
+$
+\\\qquad\qquad\qquad\qquad
+$
+\lambda $ $\textbf{x}\;s.t.
+\left\{
+\begin{array}{ccc}
+\boldsymbol{A}\left ( \boldsymbol{x}\right )< \lambda \boldsymbol{B}\left ( \boldsymbol{x}\right ) \\
+\boldsymbol{B}\left ( \boldsymbol{x}\right )> 0\\
+\boldsymbol{C}\left ( \boldsymbol{x}\right )< 0 
+\end{array} 
+\right.
+$
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]{6.5.4线性矩阵问题matlab求解}
+
+考虑Riccati不等式
+\[\boldsymbol{A}^{T}\boldsymbol{X}+\boldsymbol{X}\boldsymbol{A}+\left ( \boldsymbol{X}\boldsymbol{B}\right )\boldsymbol{R}^{-1} \boldsymbol{B}^{T}\boldsymbol{X}+\boldsymbol{Q}< 0\]
+分块为\[\begin{bmatrix}
+\boldsymbol{A}^{T}\boldsymbol{X}+\boldsymbol{X}\boldsymbol{A}+\boldsymbol{Q} &\boldsymbol{X}\boldsymbol{B} \\ 
+\boldsymbol{B}^{T}\boldsymbol{X} & -\boldsymbol{R}
+\end{bmatrix}< 0\]
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]{6.5.4线性矩阵问题matlab求解}
+
+带入：$\boldsymbol{A}=\begin{bmatrix}
+-2 & -3 & -1\\ 
+-3 & -1 & -1\\ 
+1 & 0 & -4
+\end{bmatrix}$
+
+$\boldsymbol{B}=\begin{bmatrix}
+-1 & 0 \\ 
+0 & -1\\ 
+-1 & -1
+\end{bmatrix}$
+$\boldsymbol{Q}=\begin{bmatrix}
+-2 & 1 & -2\\ 
+1 & -2 & -4\\ 
+-2 & -4 & -2
+\end{bmatrix}$
+$\boldsymbol{R}=\begin{bmatrix}
+1 & 0 \\ 
+0 & 1\\ 
+\end{bmatrix}$
+
+得到\[\boldsymbol{X}=\begin{bmatrix}
+0.9101 & 0.4641 & -0.2354\\ 
+0.4641 & 0.7893 & -0.0383\\ 
+-0.2354 & -0.0383 & 1.3616
+\end{bmatrix}\]
+
+
+\end{frame}
+
+\begin{frame}[allowframebreaks]{6.5.5基于Yalmip工具箱最优化求解方法}
+YALMIP工具箱解决线性规划；
+\\	\qquad \qquad\qquad\qquad min \qquad 
+$
+6x_{1}-3x_{2}-5x_{3}-2x_{4}-9x_{5} 
+$
+\\\qquad\qquad\qquad
+  $\textbf{x}\;s.t.
+\left\{
+\begin{array}{ccc}
+2x_{2}+x_{3}+4x_{4}+2x_{5} \leq 54 \\
+3x_{1}+4x_{2}+5x_{3}-x_{4}-x_{5} \leq 66\\
+x_{1}\geq 0,x_{2}\geq 2,x_{3}\geq3, x_{4}\geq 0.5,x_{5} \geq 2
+\end{array} 
+\right.
+$
+得到$x_{1}=22,x_{2}= 2,x_{3}=3, x_{4}= 0.5,x_{5} = 22.5$
+\\$
+6x_{1}-3x_{2}-5x_{3}-2x_{4}-9x_{5} =-356.5
+$
+
+\end{frame}
+
+\end{document}

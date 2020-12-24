@@ -1,0 +1,7 @@
+\beamer@sectionintoc {1}{代数方程的求解}{3}{0}{1}
+\beamer@sectionintoc {2}{无约束最优化问题求解}{9}{0}{2}
+\beamer@sectionintoc {3}{有约束最优化问题的计算机求解}{19}{0}{3}
+\beamer@sectionintoc {4}{混合整数规划问题的计算机求解}{27}{0}{4}
+\beamer@sectionintoc {5}{线性矩阵不等式问题求解}{35}{0}{5}
+\beamer@sectionintoc {6}{多目标优化模型}{46}{0}{6}
+\beamer@sectionintoc {7}{动态规划及其在路径规划中的应用}{55}{0}{7}
